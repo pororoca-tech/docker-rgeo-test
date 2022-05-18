@@ -8,14 +8,14 @@ jobs:
         working-directory: .
     steps:
       - uses: actions/checkout@v2
+      - name: Install Geos
+        run: |
+          sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
+          sudo apt-get install libgeos-dev libproj-dev -y
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.5
           bundler-cache: true
           working-directory: .
-      - name: Install Geos
-        run: |
-          sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
-          sudo apt-get install libgeos-dev libproj-dev -y
       - name: Run check
         run: ruby test.rb
