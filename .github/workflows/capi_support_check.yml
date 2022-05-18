@@ -17,7 +17,5 @@ jobs:
         run: |
           sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
           sudo apt-get install libgeos-dev libproj-dev -y
-      - name: Install gem
-        run: gem install rgeo-geojson
       - name: Run check
         run: ruby test.rb
