@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  tester:
+    build: .
+    image: rgeo-dev:0.0.13
+    command: bash -c 'gem install rgeo-geojson && ruby test.rb'
+    working_dir: /app/
+    volumes:
+      - ./:/app/
