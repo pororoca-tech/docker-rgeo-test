@@ -18,4 +18,4 @@ jobs:
           bundler-cache: true
           working-directory: .
       - name: Run check
-        run: bundle exec test.rb
+        run: ruby test.rb
