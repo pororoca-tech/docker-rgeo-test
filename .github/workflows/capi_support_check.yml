@@ -17,5 +17,7 @@ jobs:
           ruby-version: 2.7.5
           bundler-cache: true
           working-directory: .
+      - name: Install gem manually
+        run: gem install rgeo-geojson
       - name: Run check
         run: ruby test.rb
