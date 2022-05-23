@@ -14,7 +14,7 @@ jobs:
           sudo apt-get install libgeos-dev libproj-dev -y
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.5
+          ruby-version: 2.7.4
           bundler-cache: true
           working-directory: .
       - name: Install gem manually
