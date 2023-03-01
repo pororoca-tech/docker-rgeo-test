@@ -2,6 +2,11 @@
 
 check that it works
 
+## description
+
+This is the very minimum required to check that RGeo works on Docker.
+The results aren't terribly thrilling, but it makes this a good project to test a new developer setup.
+
 ## development
 
 Generally, setting up a development environment can be tricky, what with setting up databases, test areas, etc. and using the same versions of software. Added to this, everyone's computer is slightly different. This is why we use Docker containers. These are standalone virtual Linux instances that, once running, can be accessed from your normal commandline. They can also talk to each other.
