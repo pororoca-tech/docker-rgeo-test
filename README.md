@@ -1,10 +1,13 @@
 # docker-rgeo-test
+
 check that it works
 
-# development
+## development
+
 Generally, setting up a development environment can be tricky, what with setting up databases, test areas, etc. and using the same versions of software. Added to this, everyone's computer is slightly different. This is why we use Docker containers. These are standalone virtual Linux instances that, once running, can be accessed from your normal commandline. They can also talk to each other.
 
-# to run
+## to run
+
 0. have a github account and become a member of https://github.com/pororoca-tech
 1. install Docker Desktop
 2. This should have made commands available in your commandline. To check, open a terminal and enter:
@@ -23,5 +26,19 @@ docker -v
 docker-compose up
 ```
 
-# Github workflow
+A successful run should say:
+```sh
+[+] Running 2/2
+ ⠿ Network docker-rgeo-test_default     Created                                        0.1s
+ ⠿ Container docker-rgeo-test-tester-1  Creat...                                       0.1s
+Attaching to docker-rgeo-test-tester-1
+docker-rgeo-test-tester-1  | Building native extensions. This could take a while...
+docker-rgeo-test-tester-1  | Successfully installed rgeo-3.0.0
+docker-rgeo-test-tester-1  | Successfully installed rgeo-geojson-2.1.1
+docker-rgeo-test-tester-1  | 2 gems installed
+docker-rgeo-test-tester-1  | hello world of CAPI
+docker-rgeo-test-tester-1 exited with code 0
+```
+
+## Github workflow
 It also builds itself on Github Workflow automatically
